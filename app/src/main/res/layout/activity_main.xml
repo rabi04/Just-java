@@ -19,10 +19,8 @@
             android:autofillHints="Name"
             tools:ignore="LabelFor" />
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/HeaderTextStyle"
             android:text="@string/toppings"
-            android:textAllCaps="true"
             android:layout_marginBottom="10dp"/>
         <CheckBox
             android:layout_width="wrap_content"
@@ -37,8 +35,7 @@
             android:layout_marginBottom="10dp"
             android:id="@+id/chocolate"/>
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/HeaderTextStyle"
             android:text="@string/quantity"
             android:textAllCaps="true"
             android:layout_marginBottom="10dp"/>
