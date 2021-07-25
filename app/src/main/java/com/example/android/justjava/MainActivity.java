@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     int quantity = 0;
-    boolean isChecked = false;
-
     public  void submitOrder(View view) {
         display(quantity);
         Log.v("checked box","it done working fine");
@@ -58,18 +56,18 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("QueryPermissionsNeeded")
     private void displayPrice(int number) {
         TextView priceTextView = findViewById(R.id.price_text_view);
-        String orderBill="";
         EditText nameEnter = findViewById(R.id.nameEnter);
         CheckBox whippedCream = findViewById(R.id.whippedCream);
         CheckBox chocolate = findViewById(R.id.chocolate);
-        orderBill = nameEnter.getText() + "\n";
-        orderBill += " Add whippedCream?"+ whippedCream.isChecked() +"\n";
-        orderBill += "Add chocolates?"+ chocolate.isChecked() + "\n";
+        String orderBill = nameEnter.getText() + "\n";
+        orderBill += getString(R.string.iswhippedCreamAdded)+ whippedCream.isChecked() +"\n";
+        orderBill += getString(R.string.ischocolatesAdded)+ chocolate.isChecked() + "\n";
         orderBill += "Total:"+NumberFormat.getCurrencyInstance().format(number)+"\n ThankYou !";
         //to send to email of the customer
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:"));
         intent.putExtra(Intent.EXTRA_TEXT,orderBill);
+        intent.putExtra(Intent.EXTRA_SUBJECT,"just java bill :)");
         if(intent.resolveActivity(getPackageManager()) != null)
            try {
                 startActivity(intent);

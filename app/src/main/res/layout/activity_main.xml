@@ -7,16 +7,17 @@
     tools:context=".MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="5dp">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="name"
             android:inputType="text"
             android:layout_marginBottom="10dp"
-            android:id="@+id/nameEnter"/>
+            android:id="@+id/nameEnter"
+            android:autofillHints="Name"
+            tools:ignore="LabelFor" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,7 +33,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="chocolate"
+            android:text="@string/chocolate"
             android:layout_marginBottom="10dp"
             android:id="@+id/chocolate"/>
         <TextView

@@ -8,4 +8,7 @@
     <string name="remove_order">-</string>
     <string name="total_bill">price</string>
     <string name="order">order</string>
+    <string name="iswhippedCreamAdded">Add whippedCream?</string>
+    <string name="ischocolatesAdded">Add chocolates?</string>
+    <string name="chocolate">chocolate</string>
 </resources>
